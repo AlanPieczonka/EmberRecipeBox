@@ -11,9 +11,7 @@ export default Ember.Component.extend({
              this._resetForm();
              
              const lastID = this.get('db').getLastId();
-             console.log('last id ' + lastID);
              this.get('switchRoute')(lastID);
-             
             },
     },
     _resetForm(){
