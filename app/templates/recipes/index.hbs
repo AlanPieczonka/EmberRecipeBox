@@ -1,9 +1,13 @@
 <div class="container">
    {{#each model as |recipe|}}
+   <div>
         {{#link-to 'recipes.show' recipe.id}}
-            {{recipe.name}}
-            <img src={{recipe.imageURL}} />
+        <figure class="figure">
+                <img style="width: 30%; height: 40%;" src={{recipe.imageURL}} class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                <figcaption class="figure-caption">{{recipe.name}}</figcaption>
+        </figure>
         {{/link-to}}
+    </div>
     {{/each}}
 </div>
 {{outlet}}
