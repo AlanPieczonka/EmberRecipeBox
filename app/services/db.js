@@ -4,18 +4,23 @@ import { computed } from '@ember/object';
 const initialRecipes = [
   {
     name: 'Sushi',
-    ingredients: 'rice, wasabi, soy sauce',
+    ingredients: 'Rice, Wasabi, Soy Sauce',
     imageURL: 'https://newsbook.pl/wp-content/uploads/2016/06/sushi.jpg',
   },
   {
     name: 'Pizza',
-    ingredients: 'cheese',
+    ingredients: 'Cheese, Ham, Tomato',
     imageURL: 'https://www.wegmans.com/content/dam/wegmans/products/768/56768.jpg',
   },
   {
     name: 'Lasagne',
-    ingredients: 'pasta',
+    ingredients: 'Pasta, Meat, Vegetables',
     imageURL: 'https://www.winiary.pl/image.ashx/lasagne-ze-szpinakiem.jpg?fileID=213027&width=800&height=800&frame=True&quality=80bg=0',
+  },
+  {
+    name: '',
+    ingredients: '',
+    imageURL: ''
   } 
 ]
 

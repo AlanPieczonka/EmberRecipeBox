@@ -10,8 +10,16 @@
                      <img style="height: 60vh;" class="card-img-top" src='https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' alt="Card image cap">
                 {{/if}}
                 <div style="padding: 15px;"class="card-body">
-                    <h4 class="card-title">Name: {{recipe.name}}</h4>
-                    <p class="card-text">Ingredients: {{recipe.ingredients}}</p>
+                    {{#if recipe.name}}
+                        <h4 class="card-title">Name: {{recipe.name}}</h4>
+                    {{else}}
+                        <h4 class="card-title">Name: <span style="color: red; text-transform: uppercase">no name</span></h4>
+                    {{/if}}
+                    {{#if recipe.ingredients}}
+                        <p class="card-text">Ingredients: {{recipe.ingredients}}</p>
+                    {{else}}
+                        <p class="card-text">Ingredients: <span style="color: red; text-transform: uppercase">no ingredients</span></p> 
+                    {{/if}}
                     <div style="display: inline-block;">
                         {{recipe-delete switchRoute=(action "switchRoute") id=recipe.id}}
                     </div>
