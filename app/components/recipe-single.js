@@ -1,4 +1,9 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+const BlogPostComponent = Component.extend({});
+
+BlogPostComponent.reopenClass({
+  positionalParams: ['imageURL', 'name'] //positional params
 });
+
+export default BlogPostComponent;
