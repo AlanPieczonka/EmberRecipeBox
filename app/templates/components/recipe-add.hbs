@@ -5,7 +5,8 @@
 </p>
 
 
-<div style="width: 50%;" class="collapse" id="collapseExample" style="border: 1px solid black; padding: 15px">
+<div class="collapse col" id="collapseExample" style="border: 1px solid black; padding: 20px">
+ <div >
   <form>
       <div>
          <div>
@@ -21,9 +22,9 @@
 
     
   {{#if imageURL}}
-          <img style="width: 150px; height: 150px; margin: 10px 0 10px 0;" src={{imageURL}} > 
+          <img style="width: 125px; height: 125px; margin: 10px 0 10px 0;" src={{imageURL}} > 
   {{else}}
-          <img style="width: 150px; height: 150px; margin: 10px 0 10px 0;" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" > 
+          <img style="width: 125px; height: 125px; margin: 10px 0 10px 0;" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" > 
   {{/if}}
     
     <div>
@@ -31,6 +32,7 @@
     </div>
       </div>
   </form>
+</div>
 </div>
 {{yield}}
 
