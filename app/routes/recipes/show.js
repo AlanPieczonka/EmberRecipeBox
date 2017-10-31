@@ -7,4 +7,18 @@ export default Ember.Route.extend({
     model(params){
         return this.get('db').getSingleRecipe(params.id);
     },
+    actions: {
+        updateRecipe(id, name, ingredients, imageURL){
+            const updatedRec = {
+                id: id,
+                name: name,
+                ingredients: ingredients,
+                imageURL: imageURL,
+            }
+
+            console.log(updatedRec);
+
+            this.get('db').updateRecipe(updatedRec, id);
+        }
+    }
 });

@@ -1,4 +1,12 @@
         <figure class="figure text-center">
-                <img style="width: 150px; height: 150px;" src={{imageURL}} class="figure-img img-fluid rounded" alt={{name}}>
-                <figcaption class="figure-caption">{{name}}</figcaption>
+                {{#if imageURL}}
+                           <img style="width: 150px; height: 150px;" src={{imageURL}} class="figure-img img-fluid rounded" alt={{name}}>
+                {{else}}
+                           <img style="width: 150px; height: 150px;" src='https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' class="figure-img img-fluid rounded" alt={{name}}>
+                {{/if}}
+                {{#if name}}
+                       <figcaption class="figure-caption">{{name}}</figcaption>
+                {{else}}
+                       <figcaption class="figure-caption">Recipe name</figcaption>
+                {{/if}}
         </figure>

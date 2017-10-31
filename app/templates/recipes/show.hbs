@@ -1,14 +1,56 @@
 {{#link-to 'recipes'}}<h3 style="margin-bottom: 25px;" class='text-center'>Home</h3>{{/link-to}}
 {{#each model as |recipe|}}
     <div class="container">
-        <div class="card" style="width: 50%;">
-            <img style="height: 175px;" class="card-img-top" src={{recipe.imageURL}} alt="Card image cap">
-            <div style="padding: 15px;"class="card-body">
-                <h4 class="card-title">Name: {{recipe.name}}</h4>
-                <p class="card-text">Ingredients: {{recipe.ingredients}}</p>
-                {{recipe-delete switchRoute=(action "switchRoute") id=recipe.id}}
-                <button href="#" class="btn btn-warning">Edit</button>
+        <div class="row">
+
+            <div class="card col" style="width: 50%;">
+                {{#if recipe.imageURL}}
+                     <img style="height: 60vh;" class="card-img-top" src={{recipe.imageURL}} alt="Card image cap">
+                {{else}}
+                     <img style="height: 60vh;" class="card-img-top" src='https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' alt="Card image cap">
+                {{/if}}
+                <div style="padding: 15px;"class="card-body">
+                    <h4 class="card-title">Name: {{recipe.name}}</h4>
+                    <p class="card-text">Ingredients: {{recipe.ingredients}}</p>
+                    <div style="display: inline-block;">
+                        {{recipe-delete switchRoute=(action "switchRoute") id=recipe.id}}
+                    </div>
+                    <div style="display: inline-block">
+                        <button href="#" class="btn btn-warning" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Edit</button>
+                    </div>
+                </div>
             </div>
+
+            <div class="collapse col" id="collapseExample">
+                    <h1 class="text-center">Edit</h1>
+
+                    <div style="margin: 10px 0;">
+                        <label>Name</label>
+                        {{input value=recipe.name placeholder=recipe.name}}
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <label>Ingredients</label>
+                        {{textarea value=recipe.ingredients placeholder=recipe.ingredients}}
+                    </div>
+                    <div style="margin: 10px 0;">
+                        <label>ImageURL</label>
+                        {{input value=recipe.imageURL placeholder=recipe.imageURL}}
+                    </div>
+                    <button type="button" class="btn btn-success" {{action "updateRecipe" recipe.id recipe.name recipe.ingredients recipe.imageURL}} data-toggle="modal" data-target=".bd-example-modal-sm">Save</button>
+                    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Successfully saved!</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+            </div>
+
         </div>
     </div>
 {{/each}}
