@@ -5,6 +5,6 @@ import { inject as service } from '@ember/service';
 export default Ember.Route.extend({
     db: service(),
     model(){
-        this.get('db').get('recipes');
+        return this.get('db').get('recipes');
     }
 });

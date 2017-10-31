@@ -1,5 +1,9 @@
-index route
-{{#each model as |recipe|}}
-    {{recipe.id}}
-{{/each}}
+<div class="container">
+   {{#each model as |recipe|}}
+        {{#link-to 'recipes.show' recipe.id}}
+            {{recipe.name}}
+            <img src={{recipe.imageURL}} />
+        {{/link-to}}
+    {{/each}}
+</div>
 {{outlet}}
