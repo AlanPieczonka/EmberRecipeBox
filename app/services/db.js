@@ -63,9 +63,9 @@ export default Service.extend({
     return lastId;
   },
 
-  removeRecipe(recipe) {
+  removeRecipe(id) {
     const recipes   = this._readFromStorage('recipes');
-    const newRecipes = recipes.reject((r) => r.id === recipe);
+    const newRecipes = recipes.reject((r) => r.id === id);
 
     return this._saveToStorage('recipes', newRecipes)
   },

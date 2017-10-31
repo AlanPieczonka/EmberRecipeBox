@@ -6,7 +6,7 @@
             <div style="padding: 15px;"class="card-body">
                 <h4 class="card-title">Name: {{recipe.name}}</h4>
                 <p class="card-text">Ingredients: {{recipe.ingredients}}</p>
-                {{recipe-delete id=recipe.id}}
+                {{recipe-delete switchRoute=(action "switchRoute") id=recipe.id}}
                 <button href="#" class="btn btn-warning">Edit</button>
             </div>
         </div>
