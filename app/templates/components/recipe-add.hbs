@@ -1,0 +1,36 @@
+<p class="text-center">   
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    New Recipe
+  </button>
+</p>
+
+
+<div style="width: 50%;" class="collapse" id="collapseExample" style="border: 1px solid black; padding: 15px">
+  <form>
+      <div>
+         <div>
+      <label>Name</label><div></div>{{input value=name placeholder="Recipe name"}}
+    </div>
+    <div>
+      <label>Ingredients</label><div></div>{{textarea cols="40" rows="3" value=ingredients placeholder="Ingredients"}}
+    </div>
+    <div>
+      <label>ImageURL</label><div></div>{{input value=imageURL placeholder="Image URL"}}
+    </div>  
+
+
+    
+  {{#if imageURL}}
+          <img style="width: 150px; height: 150px; margin: 10px 0 10px 0;" src={{imageURL}} > 
+  {{else}}
+          <img style="width: 150px; height: 150px; margin: 10px 0 10px 0;" src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" > 
+  {{/if}}
+    
+    <div>
+       <button type="button" class="btn btn-success">Add</button>
+    </div>
+      </div>
+  </form>
+</div>
+{{yield}}
+
