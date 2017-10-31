@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import { computed } from '@ember/object';
+//big thanks to Michał Staśkiewicz for helping me out with this service
 
 const initialRecipes = [
     {
@@ -16,4 +18,23 @@ const initialRecipes = [
 ];
 
 export default Ember.Service.extend({
+    init(){
+        this._super(...arguments);
+
+        if(!localStorage.getItem('recipes')){
+            localStorage.setItem('recipes', []);
+            initialRecipes.forEach(recipe => this.addRecipe(recipe));
+        }
+    },
+
+    recipes: computed(function() {
+        return this._fetchRecipes();
+    }),
+
+
+    _fetchRecipes(){
+        const storeData = localStorage.getItem('recipes');
+        return JSON.parse(storeData);
+    }
+
 });
