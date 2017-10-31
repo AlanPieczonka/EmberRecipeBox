@@ -1,2 +1,15 @@
-googogog
+{{#each model as |recipe|}}
+    <div class="container">
+        <div class="card" style="width: 50%;">
+            <img style="height: 175px;" class="card-img-top" src={{recipe.imageURL}} alt="Card image cap">
+            <div style="padding: 15px;"class="card-body">
+                <h4 class="card-title">Name: {{recipe.name}}</h4>
+                <p class="card-text">Ingredients: {{recipe.ingredients}}</p>
+                <button href="#" class="btn btn-danger">Delete</button>
+                <button href="#" class="btn btn-warning">Edit</button>
+            </div>
+        </div>
+    </div>
+{{/each}}
 {{outlet}}
+
