@@ -3,6 +3,11 @@ import { computed } from '@ember/object';
 
 const initialRecipes = [
   {
+    name: 'Sushi',
+    ingredients: 'rice, wasabi, soy sauce',
+    imageURL: 'https://newsbook.pl/wp-content/uploads/2016/06/sushi.jpg',
+  },
+  {
     name: 'Pizza',
     ingredients: 'cheese',
     imageURL: 'https://www.wegmans.com/content/dam/wegmans/products/768/56768.jpg',
