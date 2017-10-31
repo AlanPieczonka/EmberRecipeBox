@@ -31,6 +31,19 @@ export default Ember.Service.extend({
         return this._fetchRecipes();
     }),
 
+    addRecipe(recipe){
+        const recipes = this._fetchRecipes();
+        const newRecipes = [...recipes, recipe];
+
+        return this._saveToStorage('recipes', newRecipes);
+    },
+
+    _saveToStorage(data){
+        const saved = localStorage.setItem('recipes', JSON.stringify(data))
+        this.notifyPropertyChange('recipes'); /*?*/
+        return saved;
+    },
+
 
     _fetchRecipes(){
         const storeData = localStorage.getItem('recipes');
