@@ -23,6 +23,7 @@ export default Ember.Service.extend({
 
         if(!localStorage.getItem('recipes')){
             localStorage.setItem('recipes', []);
+            console.log('set item recipes');
             initialRecipes.forEach(recipe => this.addRecipe(recipe));
         }
     },
@@ -32,9 +33,10 @@ export default Ember.Service.extend({
     }),
 
     addRecipe(recipe){
+        console.log(recipe);
         const recipes = this._fetchRecipes();
         const newRecipes = [...recipes, recipe];
-
+        
         return this._saveToStorage('recipes', newRecipes);
     },
 
@@ -47,7 +49,11 @@ export default Ember.Service.extend({
 
     _fetchRecipes(){
         const storeData = localStorage.getItem('recipes');
-        return JSON.parse(storeData);
+        if(storeData){
+            return JSON.parse(storeData);
+        } else{
+            return [];
+        }
     }
 
 });
