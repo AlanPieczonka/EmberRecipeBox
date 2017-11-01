@@ -1,6 +1,8 @@
 import Service from '@ember/service';
 import { computed } from '@ember/object';
 
+// Big thanks to Michał Staśkiewicz for helping me out with this service
+
 const initialRecipes = [
   {
     name: 'Sushi',
