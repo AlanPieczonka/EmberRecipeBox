@@ -15,9 +15,6 @@ export default Ember.Route.extend({
                 ingredients: ingredients,
                 imageURL: imageURL,
             }
-
-            console.log(updatedRec);
-
             this.get('db').updateRecipe(updatedRec, id);
         }
     }
