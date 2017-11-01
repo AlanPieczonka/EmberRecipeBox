@@ -5,7 +5,7 @@ const initialRecipes = [
   {
     name: 'Sushi',
     ingredients: 'Rice, Wasabi, Soy Sauce',
-    imageURL: 'https://newsbook.pl/wp-content/uploads/2016/06/sushi.jpg',
+    imageURL: 'https://wallpaperscraft.com/image/sushi_rolls_meat_fish_plate_platter_71618_1920x1080.jpg',
   },
   {
     name: 'Pizza',
@@ -43,7 +43,6 @@ export default Service.extend({
   }),
 
   addRecipe(recipe) {
-    console.log('addRecipe ran');
     const recipes   = this._readFromStorage('recipes');
     const newRecipe = {
       ...recipe,
@@ -55,8 +54,6 @@ export default Service.extend({
   },
 
   getSingleRecipe(id){
-    console.log(id);
-
     const recipes = this._readFromStorage('recipes');
     const singleRecipe = recipes.filter((recipe) => recipe.id == id);
 
@@ -77,17 +74,9 @@ export default Service.extend({
 
   updateRecipe(recipe, id){
     const recipes = this._readFromStorage('recipes');
-    console.log('Update recipe: ---------')
-    console.log(recipe);
-    console.log(id);
+    const index = recipes.findIndex(x => x.id === id);
 
-    console.log("RECIPES DB");
-    console.log(recipes);
-
-    const foundIndex = recipes.findIndex(x => x.id === id);
-
-    console.log("FOUND INDEX " + foundIndex);
-    recipes[foundIndex] = recipe;
+    recipes[index] = recipe;
 
     console.log(recipes);
 

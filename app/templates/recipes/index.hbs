@@ -1,6 +1,6 @@
 <div class="container">
    <div class="row">
-       <div class="col">
+       <div class="col center">
         {{#each model as |recipe|}}
             {{#link-to 'recipes.show' recipe.id}}
                 {{recipe-single recipe.imageURL recipe.name}}
