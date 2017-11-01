@@ -1,1 +1,1 @@
-My firs app in EmberJS. One of the FreeCodeCamp's projects.
+My first app in EmberJS. One of the FreeCodeCamp's projects.
