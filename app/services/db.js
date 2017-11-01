@@ -8,9 +8,9 @@ const initialRecipes = [
     imageURL: 'https://wallpaperscraft.com/image/sushi_rolls_meat_fish_plate_platter_71618_1920x1080.jpg',
   },
   {
-    name: 'Pizza',
-    ingredients: 'Cheese, Ham, Tomato',
-    imageURL: 'https://www.wegmans.com/content/dam/wegmans/products/768/56768.jpg',
+    name: 'Greek salad',
+    ingredients: 'Lemon, olive oil, cucumber',
+    imageURL: 'http://img.taste.com.au/rLfCKvm4/taste/2016/11/super-easy-greek-salad-81664-1.jpeg',
   },
   {
     name: 'Lasagne',
