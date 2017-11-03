@@ -40,15 +40,21 @@
 
                     <div style="margin: 10px 0;">
                         <label>Name</label>
-                        {{input value=recipe.name placeholder=recipe.name}}
+                        <div>
+                            {{input value=recipe.name placeholder=recipe.name}}
+                        </div>
                     </div>
                     <div style="margin: 10px 0;">
                         <label>Ingredients</label>
+                        <div>
                         {{textarea value=recipe.ingredients placeholder=recipe.ingredients}}
+                        </div>
                     </div>
                     <div style="margin: 10px 0;">
                         <label>ImageURL</label>
-                        {{input value=recipe.imageURL placeholder=recipe.imageURL}}
+                        <div>
+                            {{input value=recipe.imageURL placeholder=recipe.imageURL}}
+                        </div>
                     </div>
 
                     <button type="submit" class="btn btn-success" {{action "updateRecipe" recipe.id recipe.name recipe.ingredients recipe.imageURL}} data-toggle="modal" data-target=".bd-example-modal-sm">Save</button>
