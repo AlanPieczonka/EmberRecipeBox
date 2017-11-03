@@ -17,7 +17,7 @@ const initialRecipes = [
   {
     name: 'Lasagne',
     ingredients: 'Pasta, Meat, Vegetables',
-    imageURL: 'https://www.winiary.pl/image.ashx/lasagne-ze-szpinakiem.jpg?fileID=213027&width=800&height=800&frame=True&quality=80bg=0',
+    imageURL: 'http://img.taste.com.au/T2ZPkD17/taste/2016/11/pumpkin-spinach-and-lentil-lasagne-96693-1.jpeg',
   },
   {
     name: '',
