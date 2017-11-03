@@ -1,12 +1,15 @@
         <figure class="figure text-center">
+
                 {{#if imageURL}}
-                           <img style="width: 150px; height: 150px;" src={{imageURL}} class="figure-img img-fluid rounded" alt={{name}}>
+                           <img style="width: 350px; height: 250px;" src={{imageURL}} class="figure-img img-fluid rounded" alt="Recipe image">
                 {{else}}
-                           <img style="width: 150px; height: 150px;" src='https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' class="figure-img img-fluid rounded" alt={{name}}>
+                           <img style="width: 350px; height: 250px;" src='https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' class="figure-img img-fluid rounded" alt="No image placeholder">
                 {{/if}}
+
                 {{#if name}}
                        <figcaption class="figure-caption">{{name}}</figcaption>
                 {{else}}
                        <figcaption class="figure-caption">Recipe name</figcaption>
                 {{/if}}
+
         </figure>
