@@ -1,5 +1,5 @@
 ## Ember Recipe Box
-### My first Ember JS app. One of the FreeCodeCamp's projects.
+### My first Ember.js app. One of the FreeCodeCamp's projects.
 **User:**
 
 * can create recipes that have names, ingredients and image
