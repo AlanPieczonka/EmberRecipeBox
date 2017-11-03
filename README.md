@@ -9,7 +9,7 @@
 * can delete these recipes
 
 ##### All recipes are saved in browser's local storage. If user refreshes the page, these recipes will still be there. 
-
+###### Note: I know inline-styling is generally a bad practice, but in this project I wanted to focus mainly on Ember.js. In the future I will probably move custom styles to external CSS file. 
 ### Installation & Running:
 	git clone https://github.com/AlanPieczonka/EmberRecipeBox.git
 	cd EmberRecipeBox
