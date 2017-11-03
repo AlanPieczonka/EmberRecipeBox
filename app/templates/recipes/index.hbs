@@ -1,13 +1,13 @@
 <div class="container">
    <div class="row">
-       <div class="col center">
+       <div class="col-md-6 center">
         {{#each model as |recipe|}}
             {{#link-to 'recipes.show' recipe.id}}
                 {{recipe-single recipe.imageURL recipe.name}}
             {{/link-to}}
          {{/each}}
        </div>
-       <div class="col">
+       <div class="col-md-6">
            {{recipe-add switchRoute=(action "switchRoute")}}
        </div>
     </div>
