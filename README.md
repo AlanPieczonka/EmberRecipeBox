@@ -17,5 +17,5 @@
 	ember s 
 
 ![AppScreenshot1](https://user-images.githubusercontent.com/20932829/32370736-8020dbaa-c08e-11e7-8cf8-c8f10a4ab94b.png)
-![AppScreenshot2](https://user-images.githubusercontent.com/20932829/32280324-c22ba86e-bf1b-11e7-8434-6b830c2b28c0.png)
-![AppScreenshot3](https://user-images.githubusercontent.com/20932829/32280426-262e64c8-bf1c-11e7-90c6-4827e291b574.png)
+![AppScreenshot2](https://user-images.githubusercontent.com/20932829/32370999-6b5a5f9c-c08f-11e7-8e40-dbaf1803e130.png)
+![AppScreenshot3](https://user-images.githubusercontent.com/20932829/32371203-4ab4dac8-c090-11e7-9d50-fa93f85d09f1.png)
