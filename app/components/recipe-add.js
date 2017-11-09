@@ -8,11 +8,11 @@ export default Ember.Component.extend({
     db: service(),
     actions: {
         addRecipe(){
-             let recipe = this.getProperties('name', 'ingredients', 'imageURL');
+             const recipe = this.getProperties('name', 'ingredients', 'imageURL');
              get(this, 'db').addRecipe(recipe);
 
              this._resetForm();
-             
+
              const lastID = get(this, 'db').getLastId();
              get(this, 'router').transitionTo(`/recipes/${lastID}`);
             },
