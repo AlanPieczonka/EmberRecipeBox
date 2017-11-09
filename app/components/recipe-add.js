@@ -9,10 +9,11 @@ export default Ember.Component.extend({
     actions: {
         addRecipe(){
              let recipe = this.getProperties('name', 'ingredients', 'imageURL');
-             this.get('db').addRecipe(recipe);
+             get(this, 'db').addRecipe(recipe);
+
              this._resetForm();
              
-             const lastID = this.get('db').getLastId();
+             const lastID = get(this, 'db').getLastId();
              get(this, 'router').transitionTo(`/recipes/${lastID}`);
             },
     },

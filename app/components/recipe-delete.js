@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     db: service(),
     actions: {
         deleteRecipe(id){
-            this.get('db').removeRecipe(id);
+            get(this, 'db').removeRecipe(id);
             get(this, 'router').transitionTo('recipes');
         }
     }
