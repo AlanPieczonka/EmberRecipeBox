@@ -1,8 +1,10 @@
 import Ember from 'ember';
 
 import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
 export default Ember.Component.extend({
+    router: service(),
     db: service(),
     actions: {
         addRecipe(){
@@ -11,7 +13,7 @@ export default Ember.Component.extend({
              this._resetForm();
              
              const lastID = this.get('db').getLastId();
-             this.get('switchRoute')(lastID);
+             get(this, 'router').transitionTo(`/recipes/${lastID}`);
             },
     },
     _resetForm(){
