@@ -9,8 +9,7 @@ export default Ember.Route.extend({
     },
     actions: {
         updateRecipe(recipe){
-            const id = recipe.id;
-            this.get('db').updateRecipe(recipe, id);
+            this.get('db').updateRecipe(recipe);
         }
     }
 });
