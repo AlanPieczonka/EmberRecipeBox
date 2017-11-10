@@ -59,7 +59,6 @@ export default Service.extend({
     recipes[index] = recipe;
 
     return this._saveToStorage('recipes', recipes);
-
   },
 
   _fetchRecipes() {
