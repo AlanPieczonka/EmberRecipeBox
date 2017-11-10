@@ -58,8 +58,6 @@ export default Service.extend({
 
     recipes[index] = recipe;
 
-    console.log(recipes);
-
     return this._saveToStorage('recipes', recipes);
 
   },
