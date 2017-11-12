@@ -52,16 +52,13 @@ export default Service.extend({
     return this._saveToStorage('recipes', newRecipes)
   },
 
-  updateRecipe(recipe, id){
+  updateRecipe(recipe){
     const recipes = this._readFromStorage('recipes');
-    const index = recipes.findIndex(x => x.id === id);
+    const index = recipes.findIndex(r => r.id === recipe.id);
 
     recipes[index] = recipe;
 
-    console.log(recipes);
-
     return this._saveToStorage('recipes', recipes);
-
   },
 
   _fetchRecipes() {
