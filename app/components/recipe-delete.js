@@ -1,13 +1,15 @@
 import Ember from 'ember';
 
 import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
 export default Ember.Component.extend({
+    router: service(),
     db: service(),
     actions: {
         deleteRecipe(id){
-            this.get('db').removeRecipe(id);
-            this.get('switchRoute')('recipes');
+            get(this, 'db').removeRecipe(id);
+            get(this, 'router').transitionTo('recipes');
         }
     }
  });
